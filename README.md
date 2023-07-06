@@ -31,6 +31,7 @@ DB_PORT=3306
 DB_DATABASE=root
 DB_USERNAME=root
 DB_PASSWORD=root
+````
 
 6. Generate application key:
 
@@ -72,4 +73,10 @@ Drug::factory()->count(10)->create()
 Implementation of Registered drugs should be valid till 1 year from the date of approval. After expiration, the drug registered should be pooled back for renewal this can be accomplished through Url as well as through command line Queue can be fired.
 ````
 php artisan queue:work
+````
+
+Laravel Cron Jobs Scheduling is also implemented to automate the validation of registered drugs #some settings are required to test
+
+````
+php artisan schedule:run
 ````
